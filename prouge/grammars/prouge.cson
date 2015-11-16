@@ -1,0 +1,52 @@
+'scopeName': 'source.progress',
+'name': 'Progress',
+'fileTypes': ['p', 'wf', 'gb', 'pff', 'fld', 'template', 'wk', 'cls', 'i'],
+'patterns': [
+    {
+        'match': '\\b(?i:(def|define|global-define|final|message|inherits|delete|initial|assign|where|when|available|can-do))\\b',
+        'name': 'progress-statement'
+    }, {
+        'match': '\\b(?i:(throw|then|by-reference|undo|no-undo|routine-level|return|as|in|returns|today|run|new|set|catch|create))\\b',
+        'name': 'progress-statement'
+    }, {
+        'match': '\\b(?i:(find|first|no-lock|lock|for|each|by|release|publish|format|put|skip|init|initial|buffer-copy|to))\\b',
+        'name': 'progress-statement'
+    }, {
+        'match': '\\b(?i:(var|variable|input|output|false|true|yes|no|function|dynamic-function|object|persistent|unformatted))\\b',
+        'name': 'progress-keyword'
+    }, {
+        'match': '\\b(?i:(or|eq|ne|gt|ge|lt|le|and|not))\\b',
+        'name': 'progress-operator'
+    }, {
+        'match': '\\b(?i:(param|parameter|table-handle|from|close))\\b',
+        'name': 'progress-keyword'
+    }, {
+        'match': '\\b(?i:(as|on|using|public|private|public|protected|error))\\b',
+        'name': 'progress-keyword'
+    }, {
+        'match': '\\b(?i:(constructor|destructor|if|else|do|class|end|procedure|method))\\b',
+        'name': 'progress-blocks'
+    }, {
+        'match': '\\b(?i:(super|copy-log|string|entry|round|substring|valid-handle|chr|substitute|substr|substring|trim|length))(\\b)*\()',
+        'name': 'progress-function'
+    }, {
+        'match': '\\b(?i:(fill))(\\b)*\()',
+        'name': 'progress-function'
+    }, {
+        'match': '\\b(?i:(int|integer|char|character|memptr|clog|blog|longchar|temp-table|handle|logical|date|void|buffer|table|extent|decimal))\\b',
+        'name': 'progress-type'
+    }, {
+        'match': '\\b(?i:(can-find))\\b',
+        'name': 'progress-type'
+    }, {
+        'match': '^\\s*\\{\\s*.+\\s*\\}\\s*$',
+        'name': 'progress-include'
+    }, {
+        'match': '\\{&.+\\}',
+        'name': 'progress-include'
+    }, {
+        'begin': '/\\*+(?!/)',
+        'end': '\\*+/',
+        'name': 'progress-comment'
+    }
+]

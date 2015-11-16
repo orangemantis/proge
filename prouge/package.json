@@ -1,0 +1,17 @@
+{
+  "name": "Prouge",
+  "description": "A short description of your syntax theme",
+  "keywords": [
+    "syntax",
+    "theme",
+    "atom",
+    "progress",
+    "abl"
+  ],
+  "repository": "https://github.com/orangemantis/prouge",
+  "author": "Ron Sims II",
+  "license": "MIT",
+  "engines": {
+    "atom": ">=1.0.0 <2.0.0"
+  }
+}
